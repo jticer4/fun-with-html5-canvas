@@ -11,6 +11,13 @@
 			const ctx = canvas.getContext('2d');
 			canvas.width = window.innerWidth;
 			canvas.height = window.innerHeight;
+			// set the color of the paintbrush
+			ctx.strokeStyle = '#BADA55';
+			// set the lines to be round where they join
+			ctx.lineJoin = 'round';
+			// set the line to be round at the end
+			ctx.lineCap = 'round';
+
 		</script>
 
 		<style>
