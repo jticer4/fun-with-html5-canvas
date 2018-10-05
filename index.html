@@ -34,12 +34,15 @@
 				ctx.lineTo(e.offsetX, e.offsetY);
 				ctx.stroke();
 				//set the starting point to the location of the mouse click
-				lastX = e.offsetX;
-				lastY = e.offsetY;
+				[lastX, lastY] = [e.offsetX, e.offsetY];
 			}
 
 			canvas.addEventListener('mousemove', draw);
-			canvas.addEventListener('mousedown', () => isDrawing = true);
+			canvas.addEventListener('mousedown', (e) => {
+				isDrawing = true;
+				//set the starting point to the location of the mouse click
+				[lastX, lastY] = [e.offsetX, e.offsetY];
+			});
 			canvas.addEventListener('mouseup', () => isDrawing = false);
 			//if you leave the canvas it will stop you from drawing immediately upon return
 			canvas.addEventListener('mouseout', () => isDrawing = false);
