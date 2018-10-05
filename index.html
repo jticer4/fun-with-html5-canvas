@@ -28,9 +28,14 @@
 				if(!isDrawing) return; //stops the function from running when they are not moused down
 				console.log(e);
 				ctx.beginPath();
+				// start from
 				ctx.moveTo(lastX, lastY);
+				// go to
 				ctx.lineTo(e.offsetX, e.offsetY);
 				ctx.stroke();
+				//set the starting point to the location of the mouse click
+				lastX = e.offsetX;
+				lastY = e.offsetY;
 			}
 
 			canvas.addEventListener('mousemove', draw);
