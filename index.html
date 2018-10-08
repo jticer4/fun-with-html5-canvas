@@ -40,6 +40,7 @@
 				ctx.stroke();
 				//set the starting point to the location of the mouse click
 				[lastX, lastY] = [e.offsetX, e.offsetY];
+				hue++;
 			}
 
 			canvas.addEventListener('mousemove', draw);
