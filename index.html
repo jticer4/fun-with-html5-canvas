@@ -4,14 +4,17 @@
 		<meta charset="UTF-8">
 		<title>HTML5 Canvas</title>
 		<link rel="stylesheet" href="style.css">
+		<link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
+		<h1 class="rainbow">Masterpiece</h1>
+		<p> ...by you</p>
 		<canvas id="draw" width="800" height="800"></canvas>
 		<script>
 			const canvas = document.querySelector('#draw');
 			const ctx = canvas.getContext('2d');
-			canvas.width = window.innerWidth / 1.25;
-			canvas.height = window.innerHeight / 1.25;
+			canvas.width = .8 * window.innerWidth;
+			canvas.height = .70 * window.innerHeight;
 			// set the color of the paintbrush
 			ctx.strokeStyle = '#BADA55';
 			// set the lines to be round where they join
@@ -20,8 +23,6 @@
 			ctx.lineCap = 'round';
 			//set the line width
 			ctx.lineWidth = 80;
-			ctx.globalCompositeOperation = 'multiply';
-
 			//will allow the painting functionality only when the mouse is clicked down
 			let isDrawing = false;
 			//sets the starting point of the line
@@ -50,7 +51,7 @@
 					hue = 0;
 				}
 				//if the line is getting too big or is too small flip it's direction so that it goes in the opposite direction
-				if(ctx.lineWidth >= 400 || ctx.lineWidth <= 1) {
+				if(ctx.lineWidth >= 240 || ctx.lineWidth <= 1) {
 					direction = !direction;
 				}
 				//if direction is true then increase the size of the line, otherwise decrease it

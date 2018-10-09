@@ -1,15 +1,41 @@
 canvas {
-	margin-top: 5%;
+	margin-top: 0;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-	border: 18px solid #3e2b14;
+	border: 28px outset #505050;
 	padding: 10px;
 	box-shadow:
-		inset 0 0 0 4px aliceblue,
-		inset 0 0 0 8px aliceblue;
+		inset 0 0 0 4px #989898,
+		inset 0 0 0 8px #989898;
+	background-color: #f9f9f9;
 }
 
 body {
 	background-color: white;
+	font: 200 35px/1.3 'Arizonia', Helvetica, sans-serif;
+	text-align: center;
+	background-image: url(html-5-canvas-bg-image.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+h1 {
+	margin-bottom: -5px;
+}
+p {
+	margin-top: -1px;
+	margin-bottom: 20px;
+}
+.rainbow {
+	/* Chrome, Safari, Opera */
+	-webkit-animation: rainbow 5s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+	0%{color: #90BAAD;}
+	25%{color: #E5C1BD;}
+	50%{color: #643A71;}
+	75%{color: #BABF95;}
+	100%{color: #90BAAD;}
 }
