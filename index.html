@@ -3,14 +3,15 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>HTML5 Canvas</title>
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<canvas id="draw" width="800" height="800"></canvas>
 		<script>
 			const canvas = document.querySelector('#draw');
 			const ctx = canvas.getContext('2d');
-			canvas.width = window.innerWidth;
-			canvas.height = window.innerHeight;
+			canvas.width = window.innerWidth / 1.25;
+			canvas.height = window.innerHeight / 1.25;
 			// set the color of the paintbrush
 			ctx.strokeStyle = '#BADA55';
 			// set the lines to be round where they join
