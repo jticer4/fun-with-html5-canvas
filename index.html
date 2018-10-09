@@ -18,8 +18,8 @@
 			// set the line to be round at the end
 			ctx.lineCap = 'round';
 			//set the line width
-			ctx.lineWidth = 0;
-			ctx.globalCompositeOperation = 'soft-light';
+			ctx.lineWidth = 80;
+			ctx.globalCompositeOperation = 'multiply';
 
 			//will allow the painting functionality only when the mouse is clicked down
 			let isDrawing = false;
@@ -49,7 +49,7 @@
 					hue = 0;
 				}
 				//if the line is getting too big or is too small flip it's direction so that it goes in the opposite direction
-				if(ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
+				if(ctx.lineWidth >= 400 || ctx.lineWidth <= 1) {
 					direction = !direction;
 				}
 				//if direction is true then increase the size of the line, otherwise decrease it
